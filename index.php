@@ -4,6 +4,9 @@ require_once 'db.php';
 // --- 1. Fetch Data ---
 $stmt = $pdo->query("SELECT id, name, speciality, type FROM odborky ORDER BY speciality ASC");
 $items = $stmt->fetchAll();
+
+$stmt_vyzvy = $pdo->query("SELECT id, name FROM vyzvy ORDER BY name ASC");
+$vyzvy = $stmt_vyzvy->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -60,11 +63,22 @@ $items = $stmt->fetchAll();
             margin-bottom: 16px;       /* Matches tdi_664 space */
         }
 
+        .icon-wrapper.no-border {
+            border: 2px solid transparent;
+            border-radius: 0;
+            height: auto;
+        }
+
         .icon-wrapper img {
             max-width: 95%;
             max-height: 95%;
             object-fit: contain;
             border-radius: 50%;
+        }
+
+        .icon-wrapper.no-border img {
+            border-radius: 0;
+            max-height: none;
         }
 
         /* Title Styling (Matches the <p><strong> Čitateľ ) */
@@ -121,5 +135,34 @@ $items = $stmt->fetchAll();
         <?php endforeach; ?>
     </div>
 
-</body>
+    <h1>Výzvy</h1>
 
+    <div class="grid-container">
+        <?php foreach ($vyzvy as $item): 
+            $cleanName = $item['name'];
+            $fileNameBase = $item['name']; // Helpful for file system safety
+            
+            $image_path = "img/vyzvy/" . $fileNameBase . ".png";
+            $placeholder = "img/placeholder/vyzva.png";
+            
+            if (file_exists($image_path)) {
+                $imgPath = $image_path;
+            } else {
+                $imgPath = $placeholder;
+            }
+        ?>
+            <div class="card">
+            	<a href="vyzva.php?id=<?php echo $item['id']; ?>">
+		        <div class="icon-wrapper no-border">
+		            <img src="<?= htmlspecialchars($imgPath) ?>" alt="<?= htmlspecialchars($cleanName) ?>" loading="lazy">
+		        </div>
+                </a>
+                
+                <div class="title">
+                    <strong><?= htmlspecialchars($cleanName) ?></strong>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+
+</body>

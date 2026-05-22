@@ -165,4 +165,6 @@ $vyzvy = $stmt_vyzvy->fetchAll();
         <?php endforeach; ?>
     </div>
 
+    <?php include 'footer.php'; ?>
+
 </body>

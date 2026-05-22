@@ -1,0 +1,1 @@
+<h4 style="text-align: center; margin-top: 50px; font-weight: normal; color: #444;">Pre otázky alebo nášivky napíš na jakubo.hlavaty@gmail.com</h4>

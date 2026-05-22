@@ -170,8 +170,8 @@ $display_img = file_exists($image_path) ? $image_path : $placeholder;
         </div>
     </div>
 </div>
-</body>
+
+<?php include 'footer.php'; ?>
 
 </body>
 </html>
-

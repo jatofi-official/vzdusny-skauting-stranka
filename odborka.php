@@ -216,6 +216,7 @@ $placeholder = "img/placeholder/" . $odborka['type'] . ".png";
 <p>Na získanie odborky je potrebné dodržať toto pravidlo, nedá sa obísť. Je to na tvojej cti, že si ho dodržal.</p>
 </div>
 
+<?php include 'footer.php'; ?>
+
 </body>
 </html>
-

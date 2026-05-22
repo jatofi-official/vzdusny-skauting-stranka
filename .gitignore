@@ -1,0 +1,8 @@
+db.php
+
+# Image files
+img/**/*.png
+!img/placeholder/**
+
+# PDF files
+*.pdf

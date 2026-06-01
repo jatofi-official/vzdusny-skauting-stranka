@@ -6,14 +6,17 @@ function parse_markdown($text) {
     $text = preg_replace('/_([^_]+)_/u', '<em>$1</em>', $text);
 
     // 2. Headers
-    $text = preg_replace('/^### (.*)$/m', '<h3>$1</h3>', $text);
+    $text = preg_replace('/^### (.*)$/m', "\n\n<h3>$1</h3>\n\n", $text);
 
     // 3. Handle Lists
     $text = preg_replace('/^\s*[\-\•]\s+(.*)$/m', '<li class="sub-item">$1</li>', $text);
     $text = preg_replace('/^\d+\.\s+(.*)$/m', '<li class="main-item">$1</li>', $text);
 
     // 4. Wrap List items in <ol>
-    $text = preg_replace('/((?:<li.*?>.*?<\/li>\s*)+)/s', '<ol class="badge-list">$1</ol>', $text);
+    $text = preg_replace('/((?:<li.*?>.*?<\/li>\s*)+)/s', "\n\n<ol class=\"badge-list\">\n$1</ol>\n\n", $text);
+
+    // Normalize newlines to prevent empty parts
+    $text = preg_replace("/\n{3,}/", "\n\n", trim($text));
 
     // 5. Paragraph Handling - Split by double newlines
     $parts = explode("\n\n", $text);

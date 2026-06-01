@@ -1,5 +1,6 @@
 <?php
 require_once 'db.php';
+require_once 'markdown.php';
 
 // --- 1. Fetch Single Odborka ---
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;
@@ -24,39 +25,6 @@ function get_part($full_text, $header_pattern) {
     return '';
 }
 
-
-function parse_markdown($text) {
-    // 1. Basic Bold/Italic
-    $text = preg_replace('/\*\*(.*?)\*\*/u', '<strong>$1</strong>', $text);
-    $text = preg_replace('/\*([^\*]+)\*/u', '<em>$1</em>', $text);
-    $text = preg_replace('/_([^_]+)_/u', '<em>$1</em>', $text);
-
-    // 2. Handle Sub-points (lines starting with - or bullet)
-    // We wrap them in a span or a sub-list style so they don't break the main list
-    $text = preg_replace('/^\s*[\-\•]\s+(.*)$/m', '<li class="sub-item">$1</li>', $text);
-
-    // 3. Handle Main Numbered Points (1., 2. etc)
-    $text = preg_replace('/^\d+\.\s+(.*)$/m', '<li class="main-item">$1</li>', $text);
-
-    // 4. Wrap the whole block in an ordered list if it contains list items
-    if (strpos($text, '<li') !== false) {
-        // We wrap the groups. To keep it simple and avoid the "one big list" bug:
-        $text = "<ol class='badge-list'>" . $text . "</ol>";
-    }
-
-    // 5. CRITICAL: Remove extra whitespace between tags BEFORE nl2br
-    // This removes the empty lines that usually sit between 1. and 2.
-    $text = preg_replace('/>\s+<li/u', '><li', $text);
-    $text = preg_replace('/<\/li>\s+<li/u', '</li><li', $text);
-
-    // 6. Final newline conversion for the text that isn't in a list
-    // $text = nl2br(trim($text));
-
-    // 7. Cleanup: nl2br often puts <br> inside the list tags where they don't belong
-    $text = str_replace(["<ol class='badge-list'><br />", "</li><br />"], ["<ol class='badge-list'>", "</li>"], $text);
-
-    return $text;
-}
 
 $green_html = parse_markdown(get_part($content, 'Zelený stupeň'));
 $red_html   = parse_markdown(get_part($content, 'Červený stupeň'));

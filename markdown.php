@@ -1,3 +1,4 @@
+<?php
 function parse_markdown($text) {
     // 1. Basic Bold/Italic
     $text = preg_replace('/\*\*(.*?)\*\*/u', '<strong>$1</strong>', $text);

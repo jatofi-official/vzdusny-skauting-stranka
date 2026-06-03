@@ -6,3 +6,6 @@ img/**/*.png
 
 # PDF files
 *.pdf
+
+# Brand
+brand/*.html

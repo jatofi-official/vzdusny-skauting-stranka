@@ -13,7 +13,7 @@ include 'navigation.php';
                 <div class="hero-content">
                     <span class="overline">Vzdušní skauti</span>
                     <h1>Nebojíme sa techniky</h1>
-                    <a href="<?= $base_url ?>/ako-sa-pridat.php" class="btn">Pridaj sa k nám</a>
+                    <a href="<?= $base_url ?>/pridat" class="btn">Pridaj sa k nám</a>
                 </div>
             </div>
         </section>
@@ -57,7 +57,7 @@ include 'navigation.php';
     <main class="container">
         <!-- Card 1: Program (Links to your existing index.php) -->
         <div class="card">
-            <img src="https://picsum.photos/600/400?random=2" alt="Skautský program" loading="lazy">
+            <img src="images/bsd-1.jpg" alt="Skautský program" loading="lazy">
             <div class="card-body">
                 <h3>Program</h3>
                 <p>Prehľad všetkých našich skautských výziev, odboriek a voľných programových modulov.</p>
@@ -67,17 +67,17 @@ include 'navigation.php';
 
         <!-- Card 2: Ako sa pridať -->
         <div class="card">
-            <img src="https://picsum.photos/600/400?random=3" alt="Ako sa pridať k skautom" loading="lazy">
+            <img src="images/mapi-aura.jpg" alt="Ako sa pridať k skautom" loading="lazy">
             <div class="card-body">
                 <h3>Ako sa pridať</h3>
                 <p>Zaujíma ťa program ktorý ponúkame? Môžeš sa stať vzdušným skautom aj vo vlastnom zbore.</p>
-                <a href="<?= $base_url ?>/ako-sa-pridat.php" class="link-btn">Zisti viac</a>
+                <a href="<?= $base_url ?>/pridat" class="link-btn">Zisti viac</a>
             </div>
         </div>
 
         <!-- Card 3: Pre skautov -->
         <div class="card">
-            <img src="https://picsum.photos/600/400?random=4" alt="Informácie pre skautov" loading="lazy">
+            <img src="images/papagaje-crazy.jpg" alt="Informácie pre skautov" loading="lazy">
             <div class="card-body">
                 <h3>Pre vzdušných skautov</h3>
                 <p>Materiály, aktuality a praktické informácie pre našich členov.</p>

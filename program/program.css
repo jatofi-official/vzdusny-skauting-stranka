@@ -1,0 +1,114 @@
+/* --- Zoznam (Grid) Odboriek a Výziev --- */
+.page-header {
+    text-align: center;
+    color: var(--slsk-dark-blue);
+    margin: 40px 0 20px 0;
+    text-transform: uppercase;
+}
+
+.badge-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px 20px;
+    max-width: 960px;
+    margin: 0 auto 50px auto;
+    padding: 0 20px;
+}
+
+.badge-card {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+/* Circle Image Wrapper */
+.badge-card .icon-wrapper {
+    width: 160px;
+    height: 160px;
+    border: 2px solid #ebebeb;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color 0.3s ease;
+    margin-bottom: 16px;
+}
+
+.badge-card .icon-wrapper.no-border {
+    border: 2px solid transparent;
+    border-radius: 0;
+    height: auto;
+}
+
+.badge-card .icon-wrapper img {
+    max-width: 95%;
+    max-height: 95%;
+    object-fit: contain;
+    border-radius: 50%;
+}
+
+.badge-card .icon-wrapper.no-border img {
+    border-radius: 0;
+    max-height: none;
+}
+
+.badge-card .title {
+    font-size: 18px;
+    font-weight: 200;
+    margin-top: 0;
+    padding: 0 10px;
+    line-height: 1.3;
+}
+
+.badge-card .title strong {
+    color: black;
+}
+
+/* --- Detail Odborky a Výzvy --- */
+.detail-container { 
+    max-width: 1000px; 
+    margin: 40px auto; 
+    padding: 0 20px; 
+}
+
+h1.page-title { 
+    font-weight: 800;
+    color: var(--slsk-light-blue);
+    text-align: left; 
+    font-size: 32px; 
+    margin-bottom: 30px; 
+}
+
+.detail-container h3 { 
+    font-weight: 600;
+    color: var(--slsk-light-blue);
+    font-size: 24px; 
+    margin-top: 0; 
+}
+
+.row { display: flex; flex-wrap: wrap; margin-bottom: 30px; align-items: flex-start; }
+.text-col { flex: 0 0 70%; max-width: 70%; padding-right: 30px; box-sizing: border-box; }
+.img-col { flex: 0 0 30%; max-width: 30%; text-align: center; }
+.img-col img { width: 100%; max-width: 200px; padding: 10px; }
+
+.content-area { text-align: justify; font-size: 16px; }
+.content-area ol, .content-area ul { padding-left: 25px; margin-top: 10px; }
+.content-area li { margin-bottom: 5px; }
+
+em { color: #666; font-style: italic; display: block; margin-bottom: 10px; }
+.img-placeholder { width: 200px; height: 200px; background: #f9f9f9; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; color: #ccc; border: 1px dashed #ddd; }
+
+@media (max-width: 768px) {
+    .text-col, .img-col { flex: 0 0 100%; max-width: 100%; padding-right: 0; }
+    .img-col { order: -1; margin-bottom: 20px; }
+}
+
+.badge-list { padding-left: 20px; list-style: none; counter-reset: item; }
+.main-item { counter-increment: item; position: relative; margin-top: 2px; }
+.main-item::before { content: counter(item) ". "; position: absolute; left: -20px; }
+.sub-item { margin-left: 20px; margin-top: 2px; font-weight: normal; display: flex; align-items: flex-start; }
+.sub-item::before { content: "• "; color: var(--slsk-light-blue); padding-right: 8px; flex-shrink: 0; }

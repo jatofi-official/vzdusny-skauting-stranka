@@ -33,115 +33,16 @@ $name = $odborka['name'];
 $green_img = "img/" . $name . "_zelený.png";
 $red_img   = "img/" . $name . "_červený.png";
 $placeholder = "img/placeholder/" . $odborka['type'] . ".png";
+
+$page_title = $name . " - Odborka";
+$custom_css = ['/program/program.css'];
+include '../header.php';
+include '../navigation.php';
 ?>
 
-<!DOCTYPE html>
-<html lang="sk">
-<head>
-    <meta charset="UTF-8">
-    <title><?= htmlspecialchars($name) ?> - Odborka</title>
-    <link href="https://fonts.googleapis.com/css2?family=Georama:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
-    <style>
-        /* Base styles */
-        body, p, li {
-            font-family: 'Georama', sans-serif;
-            font-size: 14px;
-            line-height: 21px;
-            font-weight: normal;
-            color: #000000;
-        }
-
-        body { background: #fff; margin: 0; padding: 40px 10px; }
-        .container { max-width: 1000px; margin: 0 auto; }
-        
-        /* Main Name Heading */
-        h1.page-title { 
-            font-family: 'Georama', 'TheSans', 'Roboto', sans-serif !important;
-            font-weight: 600;
-            color: #00b5e2 !important;
-            text-align: left; 
-            font-size: 32px; 
-            margin-bottom: 50px; 
-            text-transform: uppercase;
-        }
-
-        /* Subheadings (### parts) */
-        h3 { 
-            font-family: 'Georama', 'TheSans', 'Roboto', sans-serif !important;
-            font-weight: 600;
-            color: #00b5e2 !important;
-            font-size: 24px; 
-            margin-top: 0; 
-        }
-
-        .row { display: flex; flex-wrap: wrap; margin-bottom: 0px; align-items: flex-start; }
-        .text-col { flex: 0 0 70%; max-width: 70%; padding-right: 30px; box-sizing: border-box; }
-        .img-col { flex: 0 0 30%; max-width: 30%; text-align: center; }
-        .img-col img { width: 100%; max-width: 200px; padding: 10px; }
-
-        .content-area { text-align: justify; }
-        .content-area ol, .content-area ul { padding-left: 25px; margin-top: 10px; }
-        .content-area li { margin-bottom: 2px; }
-        
-        /* Markdown Italics (em) styling */
-        em { 
-            color: #666; 
-            font-style: italic; 
-            display: block;      /* Allows the margin to push elements below it */
-            margin-bottom: 10px; /* The 20px gap you requested */
-        }
-
-        .img-placeholder { width: 200px; height: 200px; background: #f9f9f9; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; color: #ccc; border: 1px dashed #ddd; }
-        
-        @media (max-width: 768px) {
-            .text-col, .img-col { flex: 0 0 100%; max-width: 100%; padding-right: 0; }
-            .img-col { order: -1; margin-bottom: 20px; }
-        }
-
-/* Reset list defaults */
-.badge-list {
-    padding-left: 20px;
-    list-style: none; /* We handle numbering/bullets manually for better control */
-    counter-reset: item;
-}
-
-/* Style for 1. 2. 3. */
-.main-item {
-    counter-increment: item;
-    position: relative;
-
-    margin-top: 2px; /* Space between main points */
-}
-.main-item::before {
-    content: counter(item) ". ";
-    position: absolute;
-    left: -20px;
-}
-
-/* Style for - sub points*/
-.sub-item {
-    margin-left: 20px;
-    margin-top: 2px;
-    font-weight: normal;
-    display: flex;          
-    align-items: flex-start; /* Keeps bullet at the top of the first line */
-}
-
-.sub-item::before {
-    content: "• ";
-    color: #00b5e2;
-    padding-right: 8px;
-    flex-shrink: 0;         /* Prevents the bullet from squishing */
-}
-
-
-    </style>
-</head>
-<body>
-
-<div class="container">
+<div class="detail-container">
     <h1 class="page-title"><?= htmlspecialchars($name) ?></h1>
-	<div class=content-area">
+	<div class="content-area">
 	<p>Ak si splnil niektoré body v minulosti, nemusíš ich plniť znova, rátajú sa ti ako splnené. Môžeš si takto uznať najviac polovicu úloh, podľa tvojho výberu.</p>
 	</div>
     <?php if ($green_html): ?>
@@ -184,6 +85,7 @@ $placeholder = "img/placeholder/" . $odborka['type'] . ".png";
 <p>Na získanie odborky je potrebné dodržať toto pravidlo, nedá sa obísť. Je to na tvojej cti, že si ho dodržal.</p>
 </div>
 
+<?php include 'footer.php'; ?>
 <?php include 'footer.php'; ?>
 
 </body>

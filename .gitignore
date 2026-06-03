@@ -1,8 +1,11 @@
 db.php
 
 # Image files
-img/**/*.png
+# img/**/*.png
 !img/placeholder/**
+img/odborky/*.png
+img/vyzvy/*.png
+
 
 # PDF files
 *.pdf

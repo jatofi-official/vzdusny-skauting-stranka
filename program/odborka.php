@@ -30,8 +30,8 @@ $green_html = parse_markdown(get_part($content, 'Zelený stupeň'));
 $red_html   = parse_markdown(get_part($content, 'Červený stupeň'));
 
 $name = $odborka['name'];
-$green_img = "img/" . $name . "_zelený.png";
-$red_img   = "img/" . $name . "_červený.png";
+$green_img = "img/odborky/" . $name . "_zelený.png";
+$red_img   = "img/odborky/" . $name . "_červený.png";
 $placeholder = "img/placeholder/" . $odborka['type'] . ".png";
 
 $page_title = $name . " - Odborka";

@@ -22,8 +22,8 @@ include '../navigation.php';
             $cleanName = $item['name'];
             $fileNameBase = $item['name']; // Helpful for file system safety
             
-            $green = "img/" . $fileNameBase . "_zelený.png";
-            $red   = "img/" . $fileNameBase . "_červený.png";
+            $green = "img/odborky/" . $fileNameBase . "_zelený.png";
+            $red   = "img/odborky/" . $fileNameBase . "_červený.png";
             $placeholder = "img/placeholder/" . $item['type'] . ".png";
             
 

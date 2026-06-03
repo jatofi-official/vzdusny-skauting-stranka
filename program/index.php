@@ -1,5 +1,5 @@
 <?php
-require_once 'db.php';
+require_once '../db.php';
 
 // --- 1. Fetch Data ---
 $stmt = $pdo->query("SELECT id, name, speciality, type FROM odborky ORDER BY speciality ASC");

@@ -1,6 +1,6 @@
 <?php
-require_once 'db.php';
-require_once 'markdown.php';
+require_once '../db.php';
+require_once '../markdown.php';
 
 // --- 1. Fetch Single Odborka ---
 $id = isset($_GET['id']) ? (int)$_GET['id'] : 0;

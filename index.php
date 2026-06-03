@@ -49,7 +49,7 @@ include 'navigation.php';
             </div>
             <div>
                 <h2>Vzdušný skauting</h2>
-                <p>Vzdušný skauting pridáva k tračinému skautingu moderný program, zameraný na techniku a vzdušné či vesmírne aktivity. Patria medzi nás piloti vetroňov, dronov, modelárskych lietadiel ale rovnako aj makeri, </p>
+                <p>Vzdušný skauting pridáva k tračinému skautingu moderný program, zameraný na techniku a vzdušné či vesmírne aktivity. Patria medzi nás piloti vetroňov, dronov, modelárskych lietadiel ale rovnako aj makeri, a skauti ktorí sa neboja moderných technológií.</p>
             </div>
         </div>
     </section>

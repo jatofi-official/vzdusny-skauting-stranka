@@ -81,7 +81,7 @@ include 'navigation.php';
             <div class="card-body">
                 <h3>Pre vzdušných skautov</h3>
                 <p>Materiály, aktuality a praktické informácie pre našich členov.</p>
-                <a href="<?= $base_url ?>/pre-skautov.php" class="link-btn">Zóna</a>
+                <!-- <a href="<?= $base_url ?>/pre-skautov.php" class="link-btn">Zóna</a> -->
             </div>
         </div>
     </main>

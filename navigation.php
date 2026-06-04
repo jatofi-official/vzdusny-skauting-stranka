@@ -14,7 +14,7 @@
     <nav id="nav-menu">
         <a href="<?= $base_url ?>/program/index.php">Program</a>
         <a href="<?= $base_url ?>/pridat">Ako sa pridať</a>
-        <a href="<?= $base_url ?>/pre-skautov">Skauti</a>
+        <!-- <a href="<?= $base_url ?>/pre-skautov">Skauti</a> -->
         <a href="<?= $base_url ?>/kontakt">Kontakt</a>
     </nav>
 </header>

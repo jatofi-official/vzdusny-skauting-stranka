@@ -56,6 +56,10 @@ include '../navigation.php';
             <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23e0e0e0'/%3E%3Cpath d='M75 75c13.26 0 24-10.74 24-24s-10.74-24-24-24-24 10.74-24 24 10.74 24 24 24zm0 12c-16.02 0-48 8.04-48 24v15h96v-15c0-15.96-31.98-24-48-24z' fill='%23a0a0a0'/%3E%3C/svg%3E" alt="Profilová fotka" class="profile-img ranger">
             <h3 class="name">Brutto</h3>
             <p class="role">Člen programovej rady</p>
+
+            <div class="contact-info">
+                <a href="https://discord.com/users/841368916928102441">Discord</a>
+            </div>
         </div>
         
     </div>

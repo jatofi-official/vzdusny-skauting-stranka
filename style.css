@@ -17,6 +17,9 @@ body {
     color: var(--text-dark);
     background-color: var(--bg-light);
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 /* --- Navigation --- */
@@ -383,7 +386,7 @@ footer {
     text-align: center;
     padding: 30px 20px;
     font-size: 14px;
-    margin-top: 0;
+    margin-top: auto;
 }
 
 /* --- Mobile Responsive Fixes --- */

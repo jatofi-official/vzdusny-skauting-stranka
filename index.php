@@ -98,6 +98,3 @@ include 'navigation.php';
     </section>
 
     <?php include 'footer.php'; ?>
-
-</body>
-</html>

@@ -5,26 +5,39 @@
 }
 
 .team-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 40px;
-    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
 }
 
 .team-card {
-    padding: 40px 20px;
+    padding: 20px;
     text-align: center;
+    width: 250px;
 }
 
 
 .profile-img {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 20px;
-    border: 4px solid var(--slsk-light-blue);
+    margin-bottom: 15px;
+    border: 3px solid gray;
 }
+
+.rover{
+    border: 3px solid #e2062c;
+
+}
+
+.ranger{
+    border: 3px solid #9f00c5;
+
+}
+
 
 .team-card .name {
     color: var(--slsk-dark-blue);
@@ -52,14 +65,14 @@
     gap: 10px;
 }
 
-.contact-info a {
+.team-card a {
     color: var(--slsk-light-blue);
     text-decoration: none;
     font-weight: 600;
     transition: color 0.2s;
 }
 
-.contact-info a:hover {
+.team-card a:hover {
     color: var(--slsk-yellow);
 }
 

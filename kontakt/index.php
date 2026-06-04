@@ -15,21 +15,47 @@ include '../navigation.php';
     <div class="team-grid">
         
         <div class="team-card">
-            <img src="https://picsum.photos/300/300?random=3" alt="Profilová fotka" class="profile-img">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23e0e0e0'/%3E%3Cpath d='M75 75c13.26 0 24-10.74 24-24s-10.74-24-24-24-24 10.74-24 24 10.74 24 24 24zm0 12c-16.02 0-48 8.04-48 24v15h96v-15c0-15.96-31.98-24-48-24z' fill='%23a0a0a0'/%3E%3C/svg%3E" alt="Profilová fotka" class="profile-img rover">
             <h3 class="name">Išmael</h3>
-            <h4 class="full-name">Samuel Štaudt</h4>
             <p class="role">Zakladateľ</p>
+
+            <div class="contact-info">
+                <a href="https://discord.com/users/781569764131733555">Discord</a>
+            </div>
         </div>
         
         <div class="team-card">
-            <img src="https://picsum.photos/300/300?random=1" alt="Profilová fotka" class="profile-img">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23e0e0e0'/%3E%3Cpath d='M75 75c13.26 0 24-10.74 24-24s-10.74-24-24-24-24 10.74-24 24 10.74 24 24 24zm0 12c-16.02 0-48 8.04-48 24v15h96v-15c0-15.96-31.98-24-48-24z' fill='%23a0a0a0'/%3E%3C/svg%3E" alt="Profilová fotka" class="profile-img rover">
             <h3 class="name">Jakoo</h3>
-            <h4 class="full-name">Jakub Hlavatý</h4>
             <p class="role">Vedúci programovej rady<br>Komunikácia</p>
 
             <div class="contact-info">
                 <a href="mailto:email1@skauting.sk">jakubo.hlavaty@gmail.com</a>
+                <a href="https://discord.com/users/622362092686802954">Discord</a>
+
             </div>
+        </div>
+
+        <div class="team-card">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23e0e0e0'/%3E%3Cpath d='M75 75c13.26 0 24-10.74 24-24s-10.74-24-24-24-24 10.74-24 24 10.74 24 24 24zm0 12c-16.02 0-48 8.04-48 24v15h96v-15c0-15.96-31.98-24-48-24z' fill='%23a0a0a0'/%3E%3C/svg%3E" alt="Profilová fotka" class="profile-img ranger">
+            <h3 class="name">Mapi</h3>
+            <p class="role">Člen programovej rady<br>Vedúci projektu <a href="https://minecraft.mustangy.sk/">MustangSMP</a></p>
+
+            <div class="contact-info">
+                <a href="https://discord.com/users/789445168230170634">Discord</a>
+            </div>
+        </div>
+        
+        <div class="team-card">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23e0e0e0'/%3E%3Cpath d='M75 75c13.26 0 24-10.74 24-24s-10.74-24-24-24-24 10.74-24 24 10.74 24 24 24zm0 12c-16.02 0-48 8.04-48 24v15h96v-15c0-15.96-31.98-24-48-24z' fill='%23a0a0a0'/%3E%3C/svg%3E" alt="Profilová fotka" class="profile-img rover">
+            <h3 class="name">Luke</h3>
+            <p class="role">Člen programovej rady</p>
+        </div>
+
+        <div class="team-card">
+            <img src="data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23e0e0e0'/%3E%3Cpath d='M75 75c13.26 0 24-10.74 24-24s-10.74-24-24-24-24 10.74-24 24 10.74 24 24 24zm0 12c-16.02 0-48 8.04-48 24v15h96v-15c0-15.96-31.98-24-48-24z' fill='%23a0a0a0'/%3E%3C/svg%3E" alt="Profilová fotka" class="profile-img ranger">
+            <h3 class="name">Brutto</h3>
+            <p class="role">Člen programovej rady</p>
         </div>
         
     </div>
@@ -39,14 +65,9 @@ include '../navigation.php';
 <section class="about-section">
     <div class="about-grid">
         <div>
-            <h2>Viac o nás</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>Phasellus egestas tellus rutrum tellus pellentesque eu tincidunt tortor. Amet nisl suscipit adipiscing bibendum est ultricies integer. In tellus integer feugiat scelerisque varius morbi enim. Ornare quam viverra orci sagittis eu. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare.</p>
+            <p>Ak máš nejaké otázky, neváhaj a ozvi sa nám!</p>
         </div>
     </div>
 </section>
 
 <?php include '../footer.php'; ?>
-
-</body>
-</html>

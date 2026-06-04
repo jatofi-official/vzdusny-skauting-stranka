@@ -10,6 +10,3 @@ include '../navigation.php';
     Zatiaľ nie je napísané. Napíš na jakubo.hlavaty@gmail.com
 
     <?php include '../footer.php'; ?>
-
-</body>
-</html>

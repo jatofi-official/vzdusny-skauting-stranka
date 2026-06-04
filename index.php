@@ -49,7 +49,7 @@ include 'navigation.php';
             </div>
             <div>
                 <h2>Vzdušný skauting</h2>
-                <p>Vzdušný skauting pridáva k tračinému skautingu moderný program, zameraný na techniku a vzdušné či vesmírne aktivity. Patria medzi nás piloti vetroňov, dronov, modelárskych lietadiel ale rovnako aj makeri, a skauti ktorí sa neboja moderných technológií.</p>
+                <p>Vzdušný skauting pridáva k tračinému skautingu moderný program, zameraný na techniku a vzdušné či vesmírne aktivity. Patria medzi nás piloti vetroňov, dronov, modelárskych lietadiel, ale rovnako aj makeri, a skauti, ktorí sa neboja moderných technológií.</p>
             </div>
         </div>
     </section>
@@ -70,7 +70,7 @@ include 'navigation.php';
             <img src="images/mapi-aura.jpg" alt="Ako sa pridať k skautom" loading="lazy">
             <div class="card-body">
                 <h3>Ako sa pridať</h3>
-                <p>Zaujíma ťa program ktorý ponúkame? Môžeš sa stať vzdušným skautom aj vo vlastnom zbore.</p>
+                <p>Zaujíma ťa program, ktorý ponúkame? Môžeš sa stať vzdušným skautom aj vo vlastnom zbore.</p>
                 <a href="<?= $base_url ?>/pridat" class="link-btn">Zisti viac</a>
             </div>
         </div>

@@ -22,6 +22,20 @@ body {
     min-height: 100vh;
 }
 
+/* --- Base Typography & Links --- */
+p a, li a {
+    color: var(--slsk-light-blue);
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid rgba(32, 189, 228, 0.3); /* Jemná svetlomodrá čiara */
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+p a:hover, li a:hover {
+    color: var(--slsk-dark-blue);
+    border-bottom-color: var(--slsk-yellow); /* Po prejdení myšou zožltne */
+}
+
 /* --- Navigation --- */
 header {
     background-color: var(--slsk-nav-bg);

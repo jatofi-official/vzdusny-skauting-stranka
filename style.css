@@ -26,6 +26,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .logo {
@@ -61,6 +62,57 @@ nav a {
 
 nav a:hover {
     color: var(--slsk-yellow);
+}
+
+/* --- Mobile Navigation --- */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        padding-top: 15px;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav a {
+        margin: 10px 0;
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .logo-text {
+        font-size: 1.1rem;
+    }
+
+    .logo img {
+        height: 40px;
+    }
+    
+    .menu-toggle.is-active .bar:nth-child(2) { opacity: 0; }
+    .menu-toggle.is-active .bar:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .menu-toggle.is-active .bar:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
 }
 
 /* --- Hero Section --- */
@@ -332,4 +384,36 @@ footer {
     padding: 30px 20px;
     font-size: 14px;
     margin-top: 0;
+}
+
+/* --- Mobile Responsive Fixes --- */
+@media (max-width: 768px) {
+    .container,
+    .program-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .our-program-section {
+        padding: 50px 20px;
+    }
+
+    .our-program-section h2 {
+        margin-bottom: 30px;
+    }
+
+    .stats-section {
+        flex-direction: column;
+        gap: 30px;
+        padding: 40px 20px;
+    }
+
+    .stat-number {
+        font-size: 2.8rem;
+    }
 }

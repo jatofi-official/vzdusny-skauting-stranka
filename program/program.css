@@ -99,7 +99,7 @@ h1.page-title {
 .content-area ol, .content-area ul { padding-left: 25px; margin-top: 10px; }
 .content-area li { margin-bottom: 5px; }
 
-em { color: #666; font-style: italic; display: block; margin-bottom: 10px; }
+em { color: #666; font-style: italic; display: block; margin-bottom: 4px; }
 .img-placeholder { width: 200px; height: 200px; background: #f9f9f9; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; color: #ccc; border: 1px dashed #ddd; }
 
 @media (max-width: 768px) {

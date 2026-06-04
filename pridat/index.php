@@ -33,7 +33,7 @@ include '../navigation.php';
             </ul>
             
             <h3 style="color: var(--slsk-light-blue); margin-top: 30px; font-weight: 700; text-transform: uppercase; font-size: 1.2rem;">Aký je postup?</h3>
-            <p>Jednoducho sa pridaj sa do nášho discordu. Tam sa vieš dozvieť viac informácií, o tom čo robíme, kde si môžeš kúpiť rovnošatu a podobne.</p>
+            <p>Jednoducho sa pridaj sa do nášho discordu. Tam sa dozvieš viac informácií, čo robíme, kde si môžeš kúpiť rovnošatu a podobne.</p>
             <a href="https://discord.gg/EGw9fns67v" class="btn" style="margin-top: 20px; font-size: 0.9rem; padding: 12px 25px;">Náš discord</a>
         </div>
 

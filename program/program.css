@@ -102,12 +102,16 @@ h1.page-title {
 .content-area ol, .content-area ul { padding-left: 25px; margin-top: 10px; }
 .content-area li { margin-bottom: 5px; }
 
+.commentary { margin-bottom: 30px; padding: 15px 20px; background: #f9f9f9; border: 1px solid #ebebeb; border-radius: 6px; }
+.commentary summary { cursor: pointer; font-weight: 600; color: var(--slsk-dark-blue); }
+.commentary[open] summary { margin-bottom: 10px; }
+
 em { color: #666; font-style: italic; display: block; margin-bottom: 4px; }
 .img-placeholder { width: 200px; height: 200px; background: #f9f9f9; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; color: #ccc; border: 1px dashed #ddd; }
 
 @media (max-width: 768px) {
     .text-col, .img-col { flex: 0 0 100%; max-width: 100%; padding-right: 0; }
-    .img-col { order: -1; margin-bottom: 20px; }
+    .img-col { margin-bottom: 20px; }
 
     /* Responzívna úprava pre mriežku odboriek a výziev na mobiloch */
     .badge-grid-container {

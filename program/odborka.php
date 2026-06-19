@@ -29,6 +29,8 @@ function get_part($full_text, $header_pattern) {
 $green_html = parse_markdown(get_part($content, 'Zelený stupeň'));
 $red_html   = parse_markdown(get_part($content, 'Červený stupeň'));
 
+$commentary_html = !empty($odborka['commentary']) ? parse_markdown($odborka['commentary']) : '';
+
 $name = $odborka['name'];
 $green_img = "img/odborky/" . $name . "_zelený.png";
 $red_img   = "img/odborky/" . $name . "_červený.png";
@@ -80,6 +82,15 @@ include '../navigation.php';
         </div>
     </div>
     <?php endif; ?>
+<?php if ($commentary_html): ?>
+<details class="commentary">
+    <summary>Autorský komentár</summary>
+    <div class="content-area">
+        <?= $commentary_html ?>
+    </div>
+</details>
+<?php endif; ?>
+
 <h3>Prečo si nemôžem započítať všetky body z minulosti?</h3>
 <p>Pravidlo o uznaní najviac polovice bodov z minulosti existuje z dôvodu, aby si pri každej odborke musel spraviť niečo extra, aby si ju získal. Body odborky sú preto navrhnuté spôsobom, kde väčšina úloh vyžaduje nejakú konkrétnu aktivitu na splnenie. Keď sa aj vyskytne úloha ohľadom nejakej znalosti, častokrát ju vyžaduje konkrétnym spôsobom preukázať, napríklad vysvetlením (družine, kamarátovi, správcovi výziev atď.) alebo inou formou. Predchádzajú sa tým situáciam, kde by si sa iba pozrel na odborku a zistil že si vlastne všetky body v minulosti splnil.</p>
 <p>Na získanie odborky je potrebné dodržať toto pravidlo, nedá sa obísť. Je to na tvojej cti, že si ho dodržal.</p>

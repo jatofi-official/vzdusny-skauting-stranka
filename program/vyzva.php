@@ -17,6 +17,8 @@ $content = $vyzva['description'];
 
 $full_html = parse_markdown($content);
 
+$commentary_html = !empty($vyzva['commentary']) ? parse_markdown($vyzva['commentary']) : '';
+
 $name = $vyzva['name'];
 $image_path = "img/vyzvy/" . $name . ".png";
 $placeholder = "img/placeholder/vyzva.png";
@@ -42,6 +44,15 @@ include '../navigation.php';
             <img src="<?= htmlspecialchars($display_img) ?>" alt="<?= htmlspecialchars($name) ?>">
         </div>
     </div>
+
+    <?php if ($commentary_html): ?>
+    <details class="commentary">
+        <summary>Autorský komentár</summary>
+        <div class="content-area">
+            <?= $commentary_html ?>
+        </div>
+    </details>
+    <?php endif; ?>
 </div>
 
 <?php include 'footer.php'; ?>

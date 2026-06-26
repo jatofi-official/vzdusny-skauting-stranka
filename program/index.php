@@ -75,5 +75,7 @@ include '../navigation.php';
         <?php endforeach; ?>
     </div>
 
+    <p style="text-align:center; margin-top: 30px;"><a href="todo.php">Čo sa pripravuje &rarr;</a></p>
+
     <?php include 'footer.php'; ?>
     <?php include '../footer.php'; ?>

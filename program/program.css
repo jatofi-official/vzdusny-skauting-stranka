@@ -109,6 +109,137 @@ h1.page-title {
 em { color: #666; font-style: italic; display: block; margin-bottom: 4px; }
 .img-placeholder { width: 200px; height: 200px; background: #f9f9f9; display: inline-flex; align-items: center; justify-content: center; font-size: 11px; color: #ccc; border: 1px dashed #ddd; }
 
+.todo-section-title {
+    text-align: left;
+    color: var(--slsk-dark-blue);
+    margin: 40px 0 16px 0;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+.todo-list {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 90px;
+    column-gap: 16px;
+    margin-bottom: 50px;
+    border-top: 1px solid #ebebeb;
+}
+.todo-row { display: contents; }
+.todo-row > div {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    padding: 12px 4px;
+    border-bottom: 1px solid #ebebeb;
+}
+.todo-row-header > div {
+    padding: 10px 4px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #999;
+    border-bottom: 2px solid #ddd;
+}
+.todo-item-name { font-weight: 700; color: var(--slsk-dark-blue); font-size: 18px; }
+.todo-speciality {
+    display: inline-block;
+    padding: 3px 12px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--slsk-nav-bg);
+    background: #e6f0fa;
+    border-radius: 12px;
+}
+.todo-status-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+}
+.todo-status-badge.status-none    { background: #f3d9d9; color: #8a2c2c; }
+.todo-status-badge.status-partial { background: #fbe6c2; color: #8a5a00; }
+.todo-status-badge.status-nopatch { background: #d9ecf3; color: #0a5b73; }
+.todo-status-badge.status-done    { background: #d7ecd9; color: #1f6b2b; }
+
+.todo-col-like { display: flex; justify-content: flex-end; }
+.todo-like-btn {
+    border: 1px solid #ddd;
+    background: var(--white);
+    color: var(--text-dark);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.todo-like-btn:hover { background: #ffe7ea; border-color: #f3a8b3; }
+.todo-like-btn.liked { background: #ffe1e6; border-color: #ff7a90; color: #c0273f; }
+
+.todo-back-link { margin-bottom: 10px; }
+.todo-back-link a { color: var(--slsk-nav-bg); font-weight: 600; text-decoration: none; }
+.todo-back-link a:hover { text-decoration: underline; }
+
+.todo-suggest { margin-top: 30px; padding: 20px; background: #f9f9f9; border: 1px solid #ebebeb; border-radius: 8px; }
+.todo-suggest-form { display: flex; flex-direction: column; gap: 10px; max-width: 500px; }
+.todo-suggest-form textarea {
+    font-family: inherit;
+    font-size: 15px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    resize: vertical;
+}
+.todo-suggest-form button {
+    align-self: flex-start;
+    background: var(--slsk-nav-bg);
+    color: var(--white);
+    border: none;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+}
+.todo-suggest-form button:hover { background: var(--slsk-dark-blue); }
+.todo-suggest-message { font-weight: 600; color: var(--slsk-green); }
+
+@media (max-width: 768px) {
+    .todo-list {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        border-top: none;
+    }
+    .todo-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 12px;
+        padding: 14px;
+        background: #f9f9f9;
+        border: 1px solid #ebebeb;
+        border-radius: 8px;
+    }
+    .todo-row-header { display: none; }
+    .todo-row > div {
+        padding: 0;
+        border-bottom: none;
+    }
+    .todo-col-name { grid-column: 1 / -1; font-size: 17px; }
+    .todo-col-speciality:empty { display: none; }
+    .todo-col-speciality { grid-column: 1 / -1; }
+    .todo-col-status::before {
+        content: attr(data-label) ": ";
+        font-size: 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #999;
+        display: block;
+        margin-bottom: 3px;
+    }
+    .todo-col-like { grid-column: 1 / -1; justify-content: flex-start; margin-top: 4px; }
+}
+
 @media (max-width: 768px) {
     .text-col, .img-col { flex: 0 0 100%; max-width: 100%; padding-right: 0; }
     .img-col { margin-bottom: 20px; }

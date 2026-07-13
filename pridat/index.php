@@ -43,10 +43,10 @@ include '../navigation.php';
             <p>Ak ťa baví technika, drony, vesmír alebo letectvo a v skautingu si nikdy nebol, toto je tvoja brána dnu. Spájame technológie s partiou a skautskými hodnotami. Zameriavame sa hlavne na mladých v skautskom a rangerskom veku (tj. 13-17), pre mladšie deti zatiaľ, žiaľ, nemáme kapacitu.</p>
             
             <h3 style="color: var(--slsk-light-blue); margin-top: 30px; font-weight: 700; text-transform: uppercase; font-size: 1.2rem;">Ako to funguje?</h3>
-            <p>Aby si sa stal skautom, musíš sa pridať do existujúceho zboru. Skautských zborov je na slovensku množstvo, no iba niektoré majú vzdušných skautov. Aktuálne otvárame v sepembri vzdušnoskautskú družinu v <strong>Bratislave</strong> - na Bilgyme.</p>
+            <p>Aby si sa stal skautom, musíš sa pridať do existujúceho zboru. Skautských zborov je na slovensku množstvo, no iba niektoré majú vzdušných skautov. Aktuálne otvárame v septembri vzdušnoskautskú družinu v <strong>Bratislave</strong> - na Bilgyme.</p>
             
             <h3 style="color: var(--slsk-light-blue); margin-top: 30px; font-weight: 700; text-transform: uppercase; font-size: 1.2rem;">Aký je postup?</h3>
-            <p>Kontaktuj nás. Prihoď info o tom, odkiaľ si, koľko máš rokov a čo ťa z nášho programu najviac chytilo. Ďalej ťa nasmerujeme. Keď sa chceš pridať do novej družiny v sepembri, napíš <strong>Bruttovi</strong>. Ak to nie je to, čo hľadáš, nezúfaj, napíš <strong>Jakovi</strong> a niečo ti možno vieme nájsť.</p>
+            <p>Kontaktuj nás. Prihoď info o tom, odkiaľ si, koľko máš rokov a čo ťa z nášho programu najviac chytilo. Ďalej ťa nasmerujeme. Keď sa chceš pridať do novej družiny v septembri, napíš <strong>Bruttovi</strong>. Ak to nie je to, čo hľadáš, nezúfaj, napíš <strong>Jakovi</strong> a niečo ti možno vieme nájsť.</p>
             <a href="<?= $base_url ?>/kontakt" class="btn" style="margin-top: 20px; font-size: 0.9rem; padding: 12px 25px;">Kontakt</a>
         </div>
 

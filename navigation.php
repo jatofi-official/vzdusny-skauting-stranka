@@ -15,6 +15,14 @@
         <a href="<?= $base_url ?>/program/index.php">Program</a>
         <a href="<?= $base_url ?>/pridat">Ako sa pridať</a>
         <!-- <a href="<?= $base_url ?>/pre-skautov">Skauti</a> -->
+        <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Naše projekty</a>
+            <div class="nav-dropdown-menu">
+                <a href="https://minecraft.mustangy.sk/">MustangSMP</a>
+                <a href="https://spevnik.mustangy.sk/">Spevník</a>
+                <a href="<?= $base_url ?>/projekty/meshcore">Meshcore skupiny</a>
+            </div>
+        </div>
         <a href="<?= $base_url ?>/kontakt">Kontakt</a>
     </nav>
 </header>

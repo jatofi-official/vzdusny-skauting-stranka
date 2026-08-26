@@ -92,7 +92,7 @@ include '../navigation.php';
 <?php endif; ?>
 
 <h3>Prečo si nemôžem započítať všetky body z minulosti?</h3>
-<p>Pravidlo o uznaní najviac polovice bodov z minulosti existuje z dôvodu, aby si pri každej odborke musel spraviť niečo extra, aby si ju získal. Body odborky sú preto navrhnuté spôsobom, kde väčšina úloh vyžaduje nejakú konkrétnu aktivitu na splnenie. Keď sa aj vyskytne úloha ohľadom nejakej znalosti, častokrát ju vyžaduje konkrétnym spôsobom preukázať, napríklad vysvetlením (družine, kamarátovi, správcovi výziev atď.) alebo inou formou. Predchádzajú sa tým situáciam, kde by si sa iba pozrel na odborku a zistil že si vlastne všetky body v minulosti splnil.</p>
+<p>Pravidlo o uznaní najviac polovice bodov z minulosti existuje z dôvodu, aby si pri každej odborke musel spraviť niečo extra, aby si ju získal. Body odborky sú preto navrhnuté spôsobom, kde väčšina úloh vyžaduje nejakú konkrétnu aktivitu na splnenie. Keď sa aj vyskytne úloha ohľadom nejakej znalosti, častokrát ju vyžaduje konkrétnym spôsobom preukázať, napríklad vysvetlením (družine, kamarátovi, správcovi výziev atď.) alebo inou formou. Predchádzajú sa tým situácie, kde by si sa iba pozrel na odborku a zistil, že si vlastne všetky body v minulosti splnil.</p>
 <p>Na získanie odborky je potrebné dodržať toto pravidlo, nedá sa obísť. Je to na tvojej cti, že si ho dodržal.</p>
 </div>
 

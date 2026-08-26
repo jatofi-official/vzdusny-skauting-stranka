@@ -3,6 +3,7 @@ db.php
 # Image files
 program/img/odborky/*.png
 program/img/vyzvy/*.png
+program/img/vpm/*.png
 
 
 # PDF files

@@ -1,5 +1,13 @@
 <?php
 function parse_markdown($text) {
+    // 0. Preserve all raw HTML tags untouched - swap them for placeholders before any other processing
+    $tags = [];
+    $text = preg_replace_callback('/<\/?[a-zA-Z][^>]*>/', function ($m) use (&$tags) {
+        $key = '@@TAG' . count($tags) . '@@';
+        $tags[$key] = $m[0];
+        return $key;
+    }, $text);
+
     // 1. Basic Bold/Italic
     $text = preg_replace('/\*\*(.*?)\*\*/u', '<strong>$1</strong>', $text);
     $text = preg_replace('/\*([^\*]+)\*/u', '<em>$1</em>', $text);
@@ -23,7 +31,7 @@ function parse_markdown($text) {
     foreach ($parts as &$part) {
         $part = trim($part);
         // If it's not a block element, wrap in <p>
-        if (!preg_match('/^<(h3|ol|li|ul)/', $part) && strlen($part) > 0) {
+        if (!preg_match('/^<(h3|ol|li|ul)/', $part) && !preg_match('/^@@TAG\d+@@/', $part) && strlen($part) > 0) {
             $part = '<p>' . nl2br($part) . '</p>';
         }
     }
@@ -33,6 +41,9 @@ function parse_markdown($text) {
     $text = preg_replace('/>\s+<li/u', '><li', $text);
     $text = preg_replace('/<\/li>\s+<li/u', '</li><li', $text);
     $text = str_replace(["<ol class='badge-list'><br />", "</li><br />", "<ol class=\"badge-list\"><br />"], ["<ol class='badge-list'>", "</li>", "<ol class=\"badge-list\">"], $text);
+
+    // 7. Restore the original, untouched HTML tags
+    $text = strtr($text, $tags);
 
     return $text;
 }

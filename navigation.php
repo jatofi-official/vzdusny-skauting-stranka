@@ -33,4 +33,14 @@
         this.classList.toggle('is-active');
         document.getElementById('nav-menu').classList.toggle('active');
     });
+
+    // Skript pre rozbalenie dropdown menu na mobile (na desktope funguje cez hover)
+    document.querySelectorAll('.nav-dropdown-toggle').forEach(function(toggle) {
+        toggle.addEventListener('click', function(e) {
+            if (window.matchMedia('(max-width: 768px)').matches) {
+                e.preventDefault();
+                this.closest('.nav-dropdown').classList.toggle('open');
+            }
+        });
+    });
 </script>

@@ -9,7 +9,7 @@ include '../../navigation.php';
 
 <div class="hero-bg-band" style="padding-bottom: 20px;">
     <div class="hero-container">
-        <div class="hero-content" style="text-align: left; padding: 20px 0;">
+        <div class="hero-content" style="text-align: left; padding: 20px 0; max-width: 800px; margin: 0 auto;">
             <span class="overline">Náš projekt</span>
             <h1 style="font-size: 2.5rem;">Skautská Meshcore skupina</h1>
         </div>
